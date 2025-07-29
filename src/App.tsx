@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <div className="h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 flex flex-col p-4 overflow-hidden">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 flex flex-col p-4 overflow-hidden">
       <header className="text-2xl font-semibold text-center">
         ♟️ AI vs AI Chess Battle
       </header>
@@ -64,9 +64,9 @@ function App() {
         </button>
       </div>
 
-      <div className="w-full max-w-6xl flex flex-row gap-4 flex-1 mt-4 overflow-hidden mx-auto">
-        <div className="flex-1 flex justify-center items-center">
-          <div className="aspect-square w-full max-w-[500px]">
+      <div className="w-full flex flex-col md:flex-row gap-4 flex-1 mt-4 overflow-hidden">
+        <div className="flex-1 flex justify-center items-center px-2">
+          <div className="w-full max-w-sm sm:max-w-md md:max-w-lg aspect-square">
             <Chessboard
               position={fen}
               arePiecesDraggable={false}
@@ -90,7 +90,7 @@ function App() {
         </div>
 
         <div
-          className="w-[25%] overflow-y-auto bg-gray-100 dark:bg-gray-800 rounded p-4 text-sm leading-relaxed shadow-inner"
+          className="md:w-[30%] w-full h-[250px] md:h-auto overflow-y-auto bg-gray-100 dark:bg-gray-800 rounded p-4 text-sm leading-relaxed shadow-inner"
           ref={historyRef}
         >
           <h2 className="font-medium mb-2 text-lg">📜 Move History</h2>
